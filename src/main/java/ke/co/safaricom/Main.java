@@ -1,19 +1,45 @@
 package ke.co.safaricom;
 
-// Press ⇧ twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
-        // Press ⌥⏎ with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner userInputObject = new Scanner(System.in
+        );
 
-        // Press ⌃R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        do {
+            System.out.println("Select process (e-encode/d-decode:");
+            String process = userInputObject.nextLine();
 
-            // Press ⌃D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing ⌘F8.
-            System.out.println("i = " + i);
-        }
+            System.out.println("Enter message:");
+            String msg = userInputObject.nextLine();
+
+            System.out.println("Enter key:");
+            int key = userInputObject.nextInt();
+
+            System.out.println("Processing...");
+            System.out.println(process);
+            if (process.startsWith("e")){
+                String output = ke.co.safaricom.encoding.encode(msg, key);
+                System.out.println(output);
+            } else if (process.startsWith("d")) {
+                System.out.println("Decoding");
+            } else {
+                System.out.println("Invalid process");
+                continue;
+            }
+            System.out.println("Do you want to quit or continue");
+            String nextStep = userInputObject.nextLine();
+            if (nextStep.startsWith("q")){
+                break;
+            }
+        } while(true);
+
+        //Account sampleOne = new Account();
+        // System.out.println(sampleOne.NUM_OF_ACCOUNTS);
+
+        //Account sampleTwo = new Account();
+        //System.out.println(sampleTwo.NUM_OF_ACCOUNTS);
     }
 }
