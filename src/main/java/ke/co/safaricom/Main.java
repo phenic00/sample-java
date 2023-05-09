@@ -36,10 +36,6 @@ public class Main {
             }
         } while(true);
 
-        //Account sampleOne = new Account();
-        // System.out.println(sampleOne.NUM_OF_ACCOUNTS);
-
-        //Account sampleTwo = new Account();
-        //System.out.println(sampleTwo.NUM_OF_ACCOUNTS);
+        
     }
 }
