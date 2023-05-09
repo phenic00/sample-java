@@ -1,6 +1,6 @@
 package ke.co.safaricom;
 
-public class encoding {
+public class Encoding {
     private static String alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static String encode(String msg, int key){

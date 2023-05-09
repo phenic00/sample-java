@@ -21,7 +21,8 @@ public class Main {
             System.out.println("Processing...");
             System.out.println(process);
             if (process.startsWith("e")){
-                String output = ke.co.safaricom.encoding.encode(msg, key);
+                //String output = ke.co.safaricom.encoding.encode(msg, key);
+                String output= Encoding.encode(msg,key);
                 System.out.println(output);
             } else if (process.startsWith("d")) {
                 System.out.println("Decoding");
@@ -36,6 +37,6 @@ public class Main {
             }
         } while(true);
 
-        
+
     }
 }
